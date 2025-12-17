@@ -29,6 +29,46 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: var(--spacing-md);
     font-weight: 700;
 }
+/* Button Layout */
+.hero-cta {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+    flex-wrap: wrap; /* Ensures buttons stack on mobile */
+}
+
+/* New Secondary Button Style */
+.secondary-btn {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+    text-decoration: none;
+}
+
+.secondary-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.secondary-btn i {
+    font-size: 0.9rem;
+}
+
+/* Adjustment for mobile buttons */
+@media (max-width: 600px) {
+    .hero-cta {
+        justify-content: center;
+    }
+}
 
 h1 {
     font-size: 2.5rem;
